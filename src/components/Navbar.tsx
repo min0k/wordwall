@@ -9,10 +9,10 @@ export default function Navbar() {
           wordwall
         </Link>
         <div className={styles.navLinks}>
-          <Link to={"/"} className={styles.text}>
+          <Link to={"/stats"} className={styles.text}>
             stats
           </Link>
-          <Link to={"/"} className={styles.text}>
+          <Link to={"/about"} className={styles.text}>
             about
           </Link>
         </div>
