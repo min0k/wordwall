@@ -1,4 +1,18 @@
-.wordwall {
+.container {
+  padding: 30px 40px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.text {
   text-decoration: none;
   color: black;
 }

@@ -3,13 +3,19 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   return (
-    <div>
-      <nav>
-        <Link to={"/"} className={styles.wordwall}>
+    <div className={styles.container}>
+      <nav className={styles.navContainer}>
+        <Link to={"/"} className={styles.text}>
           wordwall
         </Link>
-        <Link to={"/"}>stats</Link>
-        <Link to={"/"}>about</Link>
+        <div className={styles.navLinks}>
+          <Link to={"/"} className={styles.text}>
+            stats
+          </Link>
+          <Link to={"/"} className={styles.text}>
+            about
+          </Link>
+        </div>
       </nav>
     </div>
   );
