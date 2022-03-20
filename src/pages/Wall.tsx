@@ -1,5 +1,9 @@
-import React from "react";
+import Form from "../components/Form";
 
 export default function Wall() {
-  return <div>Wall</div>;
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
