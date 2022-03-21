@@ -6,7 +6,18 @@ export default function Form() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data: any) => console.log(data);
+
+  const onSubmit = (data: any) => {
+    fetch(
+      `https://wordwallserver-et57m7q3ca-uw.a.run.app/add-word?word=${data.word}&user=${data.name}`
+    )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

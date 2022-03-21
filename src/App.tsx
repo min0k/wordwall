@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Stats from "./pages/Stats";
 import Wall from "./pages/Wall";
 
+// https://wordwallserver-et57m7q3ca-uw.a.run.app/add-word?word=ITWORKS&user=human
+
 function App() {
   return (
     <div className="App">
