@@ -15,6 +15,7 @@ export default function Form(props: IProps) {
   function onClick(data: any) {
     addNewWord(data);
     props.setNewUser(false);
+    localStorage.setItem("isNewUser", "false");
   }
 
   return (
