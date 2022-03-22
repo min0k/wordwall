@@ -1,15 +1,24 @@
 import { useForm } from "react-hook-form";
 import { addNewWord } from "../api/addNewWord";
 
-export default function Form() {
+interface IProps {
+  setNewUser: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Form(props: IProps) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  function onClick(data: any) {
+    addNewWord(data);
+    props.setNewUser(false);
+  }
+
   return (
-    <form onSubmit={handleSubmit(addNewWord)}>
+    <form onSubmit={handleSubmit(onClick)}>
       <input
         placeholder="name"
         {...register("name", {
