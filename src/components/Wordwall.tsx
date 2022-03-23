@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
-
-interface IWordData {
-  createdAt: string;
-  updatedAt: string;
-  user: string;
-  word: string;
-  __v: number;
-  _id: string;
-}
+import { IWordData } from "../ts/interface";
+import styles from "./Wordwall.module.css";
 
 export default function Wordwall() {
   const [wordwall, setWordwall] = useState<IWordData[]>();
@@ -21,12 +14,23 @@ export default function Wordwall() {
       setWordwall(data);
     }
     getAllWords();
+
+    return () => {
+      setWordwall([]);
+    };
   }, []);
+
   console.log(wordwall);
 
-  const Wall = wordwall?.map((el: IWordData) => {
-    return <p key={el._id}>{el.word}</p>;
-  });
-
-  return <div>{Wall}</div>;
+  return (
+    <div className={styles.container}>
+      {wordwall?.map((el) => {
+        return (
+          <p className={styles.word} key={el._id}>
+            {el.word}
+          </p>
+        );
+      })}
+    </div>
+  );
 }
