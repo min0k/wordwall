@@ -1,7 +1,11 @@
 .container {
-  padding-top: 140px;
+  padding: 80px 0px;
 }
 
+.h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
 .text {
   font-size: 24px;
 }

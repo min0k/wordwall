@@ -1,4 +1,5 @@
 .container {
+  padding-left: 100px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
