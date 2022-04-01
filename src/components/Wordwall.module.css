@@ -1,8 +1,11 @@
 .container {
+  padding: 60px 100px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .word {
-  margin: 4px 16px;
+  font-size: 24px;
+  margin: 0px 12px 12px 0;
+  word-break: break-all;
 }
