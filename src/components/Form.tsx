@@ -12,39 +12,44 @@ export default function Form(props: IProps) {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit(props.setNewUser)}>
+      <form className={styles.form} onSubmit={handleSubmit(props.setNewUser)}>
+        <label className={styles.labels}>Who are you </label>
         <input
-          placeholder="name"
+          autoFocus
+          placeholder="JobuTupaki"
           className={styles.input}
           {...register("user", {
             pattern: {
               value: /^\S*$/,
-              message: "no spaces",
+              message: "No spaces",
             },
-            required: "name is required",
-            maxLength: { value: 50, message: "is your name really this long?" },
+            required: "Name is required",
+            maxLength: {
+              value: 50,
+              message: "Are you sure you entered your name correctly?",
+            },
           })}
         />
-        <p>{errors.user?.message}</p>
+        <p className={styles.errorMessage}>{errors.user?.message}</p>
+        <label className={styles.labels}>What is your word of choice </label>
         <input
-          placeholder="word"
+          placeholder="Bagel"
           className={styles.input}
           {...register("word", {
             pattern: {
               value: /^[a-zA-Z]+$/,
-              message: "only letters",
+              message: "Letters only",
             },
-            required: "word is required",
+            required: "A Word is required",
             maxLength: {
               value: 45,
-              message:
-                "the longest word in english is 45 characters long - pneumonoultramicroscopicsilicovolcanoconiosis",
+              message: "The longest word in english is 45 characters long...",
             },
           })}
         />
-        <p>{errors.word?.message}</p>
+        <p className={styles.errorMessage}>{errors.word?.message}</p>
         <button type="submit" className={styles.submitButton}>
-          Hello
+          Submit
         </button>
       </form>
     </div>

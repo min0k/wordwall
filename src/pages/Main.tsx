@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Wordwall from "../components/Wordwall";
 import FormController from "../components/FormController";
+import Welcome from "../components/Welcome";
+
+import styles from "./Main.module.css";
 
 export default function Mainpage() {
   const [newUser, setNewUser] = useState<boolean>(false);
@@ -12,7 +15,12 @@ export default function Mainpage() {
   }, []);
 
   if (newUser) {
-    return <FormController setNewUser={setNewUser} />;
+    return (
+      <div className={styles.container}>
+        <Welcome />
+        <FormController setNewUser={setNewUser} />
+      </div>
+    );
   }
 
   return (

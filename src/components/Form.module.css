@@ -1,18 +1,45 @@
 .container {
+  padding-top: 140px;
+}
+
+.form {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.labels {
+  font-size: 42px;
 }
 
 .input {
+  background-color: black;
+  color: white;
   border: none;
-  border-bottom: black solid 2px;
-  text-align: center;
+  border-bottom: grey solid 2px;
   font-weight: 400;
+  font-size: 40px;
+}
+
+.input:focus {
+  outline: none;
+  color: white;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.errorMessage {
+  color: red;
 }
 
 .submitButton {
-  background-color: white;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
   border: none;
-  padding: 15px 32px;
+  font-size: 80px;
+  align-self: flex-start;
+  padding: 0;
 }
