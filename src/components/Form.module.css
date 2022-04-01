@@ -41,9 +41,9 @@
   color: white;
   background-color: black;
   border: white solid 1px;
-  border-radius: 20px;
-  font-size: 40px;
+  border-radius: 30px;
+  font-size: 24px;
   align-self: flex-start;
-  padding: 12px 24px;
+  padding: 10px 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
