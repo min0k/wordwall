@@ -16,6 +16,7 @@ export default function Form(props: IProps) {
         <label className={styles.labels}>Who are you </label>
         <input
           autoFocus
+          autoComplete="off"
           placeholder="JobuTupaki"
           className={styles.input}
           {...register("user", {
@@ -26,13 +27,14 @@ export default function Form(props: IProps) {
             required: "Name is required",
             maxLength: {
               value: 50,
-              message: "Are you sure you entered your name correctly?",
+              message: "Identity must be shorter than 50 characters",
             },
           })}
         />
         <p className={styles.errorMessage}>{errors.user?.message}</p>
         <label className={styles.labels}>What is your word of choice </label>
         <input
+          autoComplete="off"
           placeholder="Bagel"
           className={styles.input}
           {...register("word", {

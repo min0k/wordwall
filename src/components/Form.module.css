@@ -9,7 +9,7 @@
 }
 
 .labels {
-  font-size: 42px;
+  font-size: 36px;
 }
 
 .input {
@@ -17,13 +17,15 @@
   color: white;
   border: none;
   border-bottom: grey solid 2px;
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: 200;
+  font-size: 36px;
+  margin-bottom: 24px;
 }
 
 .input:focus {
   outline: none;
   color: white;
+  border-bottom: white solid 2px;
 }
 
 .input:focus::placeholder {
@@ -32,14 +34,16 @@
 
 .errorMessage {
   color: red;
+  margin: 0;
 }
 
 .submitButton {
   color: white;
   background-color: black;
+  border: white solid 1px;
   border-radius: 20px;
-  border: none;
-  font-size: 80px;
+  font-size: 40px;
   align-self: flex-start;
-  padding: 0;
+  padding: 12px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
