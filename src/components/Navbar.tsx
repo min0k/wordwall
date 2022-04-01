@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <nav className={styles.navContainer}>
-        <Link to={"/"} className={styles.text}>
+        <Link to={"/"} className={styles.logoText}>
           wordwall
         </Link>
         <div className={styles.navLinks}>
