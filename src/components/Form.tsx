@@ -24,7 +24,7 @@ export default function Form(props: IProps) {
               value: /^\S*$/,
               message: "No spaces",
             },
-            required: "Name is required",
+            required: "Identity required",
             maxLength: {
               value: 50,
               message: "Identity must be shorter than 50 characters",
@@ -42,7 +42,7 @@ export default function Form(props: IProps) {
               value: /^[a-zA-Z]+$/,
               message: "Letters only",
             },
-            required: "A Word is required",
+            required: "Word required",
             maxLength: {
               value: 45,
               message: "The longest word in english is 45 characters long...",
