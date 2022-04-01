@@ -3,8 +3,11 @@ import styles from "./Welcome.module.css";
 export default function Welcome() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Welcome to the Wordwall</h1>
-      <p className={styles.text}>Tell the wall who you are along with a word</p>
+      <h1 className={styles.h1}>Hello</h1>
+
+      <p className={styles.text}>
+        In order to see the wall you must provide your indentity and a word
+      </p>
     </div>
   );
 }

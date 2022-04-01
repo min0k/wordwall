@@ -6,14 +6,14 @@ export default function Navbar() {
     <div className={styles.container}>
       <nav className={styles.navContainer}>
         <Link to={"/"} className={styles.logoText}>
-          Wordwall
+          WORDWALL.
         </Link>
         <div className={styles.navLinks}>
           <Link to={"/stats"} className={styles.text}>
-            stats
+            STATS
           </Link>
           <Link to={"/about"} className={styles.text}>
-            about
+            ABOUT
           </Link>
         </div>
       </nav>
