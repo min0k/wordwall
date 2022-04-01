@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { IFormProps as IProps } from "../ts/interface";
 import { wordEntry } from "../ts/types";
+import styles from "./Form.module.css";
 
 export default function Form(props: IProps) {
   const {
@@ -10,10 +11,11 @@ export default function Form(props: IProps) {
   } = useForm<wordEntry>();
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={handleSubmit(props.setNewUser)}>
         <input
           placeholder="name"
+          className={styles.input}
           {...register("user", {
             pattern: {
               value: /^\S*$/,
@@ -26,6 +28,7 @@ export default function Form(props: IProps) {
         <p>{errors.user?.message}</p>
         <input
           placeholder="word"
+          className={styles.input}
           {...register("word", {
             pattern: {
               value: /^[a-zA-Z]+$/,
@@ -40,7 +43,9 @@ export default function Form(props: IProps) {
           })}
         />
         <p>{errors.word?.message}</p>
-        <input type="submit" />
+        <button type="submit" className={styles.submitButton}>
+          Hello
+        </button>
       </form>
     </div>
   );
