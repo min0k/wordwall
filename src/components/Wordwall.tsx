@@ -4,7 +4,7 @@ import styles from "./Wordwall.module.css";
 
 export default function Wordwall() {
   const [wordwall, setWordwall] = useState<IWordData[]>();
-  // const [loading, setLoading] = useState<Boolean>(true);
+  const [loading, setLoading] = useState<Boolean>(true);
 
   useEffect(() => {
     async function getAllWords() {
@@ -13,6 +13,7 @@ export default function Wordwall() {
       );
       const data = await res.json();
       setWordwall(data);
+      setLoading(false);
     }
     getAllWords();
 
@@ -22,6 +23,10 @@ export default function Wordwall() {
   }, []);
 
   console.log(wordwall);
+
+  if (loading) {
+    return <div className={styles.container}>loading</div>;
+  }
 
   return (
     <div className={styles.container}>
