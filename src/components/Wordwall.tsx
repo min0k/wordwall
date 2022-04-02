@@ -4,6 +4,7 @@ import styles from "./Wordwall.module.css";
 
 export default function Wordwall() {
   const [wordwall, setWordwall] = useState<IWordData[]>();
+  // const [loading, setLoading] = useState<Boolean>(true);
 
   useEffect(() => {
     async function getAllWords() {
@@ -26,9 +27,14 @@ export default function Wordwall() {
     <div className={styles.container}>
       {wordwall?.map((el) => {
         return (
-          <p className={styles.word} key={el._id}>
+          <div className={styles.word} key={el._id}>
             {el.word}
-          </p>
+            <span className={styles.wordHover}>
+              <p className={styles.hoverText}>
+                By {el.user} <br /> on {el.createdAt.substring(0, 10)}
+              </p>
+            </span>
+          </div>
         );
       })}
     </div>

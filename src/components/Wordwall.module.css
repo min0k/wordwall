@@ -5,7 +5,40 @@
 }
 
 .word {
+  color: rgb(171, 171, 171);
   font-size: 24px;
   margin: 0px 12px 12px 0;
   word-break: break-all;
+}
+
+.word {
+  position: relative;
+  display: inline-block;
+}
+
+.word .wordHover {
+  visibility: hidden;
+  min-width: 240px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.word:hover {
+  color: white;
+}
+
+.word:hover .wordHover {
+  visibility: visible;
+}
+
+.hoverText {
+  font-size: 20px;
 }
