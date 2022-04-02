@@ -17,6 +17,7 @@ export default function Mainpage() {
   if (newUser) {
     return (
       <div className={styles.container}>
+        <div className={styles.background} />
         <Welcome />
         <FormController setNewUser={setNewUser} />
       </div>
