@@ -1,6 +1,3 @@
-.container {
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -8,7 +5,7 @@
 }
 
 .labels {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .input {
