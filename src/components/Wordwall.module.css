@@ -5,7 +5,7 @@
 }
 
 .word {
-  color: rgb(171, 171, 171);
+  color: rgb(152, 152, 152);
   font-size: 24px;
   margin: 0px 12px 12px 0;
   word-break: break-all;
@@ -31,14 +31,13 @@
   margin-left: -60px;
 }
 
-.word:hover {
-  color: white;
-}
-
 .word:hover .wordHover {
   visibility: visible;
 }
 
+.word:hover {
+  color: white;
+}
 .hoverText {
   font-size: 20px;
 }
