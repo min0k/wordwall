@@ -22,8 +22,6 @@ export default function Wordwall() {
     };
   }, []);
 
-  console.log(wordwall);
-
   if (loading) {
     return <div className={styles.container}>loading...</div>;
   }
