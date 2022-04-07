@@ -4,7 +4,7 @@ export default function Welcome() {
   return (
     <div className={styles.container}>
       <p className={styles.text}>
-        To see the wall, provide your indentity and a word.
+        To see the wall, provide your identity and a word.
       </p>
     </div>
   );
