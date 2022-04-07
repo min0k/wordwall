@@ -9,3 +9,10 @@
   overflow: visible;
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding-left: 40px;
+
+  }
+}
