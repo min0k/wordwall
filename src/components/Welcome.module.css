@@ -5,6 +5,10 @@
 .text {
   font-size: 40px;
   padding-bottom: 20px;
+  animation: fadein ease 2s;
 }
 
-
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

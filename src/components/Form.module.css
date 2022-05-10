@@ -1,3 +1,7 @@
+.container {
+  animation: fadein ease-in-out 4s;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -47,4 +51,10 @@
 
 .submitButton:hover {
   border: white solid 2px;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

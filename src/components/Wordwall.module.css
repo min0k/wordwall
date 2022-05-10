@@ -2,6 +2,7 @@
   padding: 60px 100px;
   display: flex;
   flex-wrap: wrap;
+  animation: fadein ease-in-out 2s;
 }
 
 .word {
@@ -48,3 +49,7 @@
   }
 }
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
