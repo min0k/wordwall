@@ -13,7 +13,6 @@ export default function Wordwall() {
       );
       const data = await res.json();
       setWordwall(data);
-      setLoading(false);
     }
     getAllWords();
 
@@ -22,8 +21,14 @@ export default function Wordwall() {
     };
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
   if (loading) {
-    return <div className={styles.container}>loading...</div>;
+    return <h1 className={styles.loading}>LOADING WALL</h1>;
   }
 
   return (

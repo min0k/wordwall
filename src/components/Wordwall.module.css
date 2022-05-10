@@ -2,8 +2,16 @@
   padding: 60px 100px;
   display: flex;
   flex-wrap: wrap;
-  animation: fadein ease-in-out 2s;
+  animation: fadein ease-in-out 1s;
 }
+
+.loading {
+  padding-left: 100px;
+  font-size: clamp(3rem, 2.2rem + 4vw, 7rem);
+  animation: fadeinandout ease 4.4s;
+
+}
+
 
 .word {
   color: rgb(152, 152, 152);
@@ -47,9 +55,17 @@
   .container {
     padding: 60px 40px;
   }
+  .loading {
+    padding-left: 60px;
+  }
 }
 
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes fadeinandout {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
 }
